@@ -60,7 +60,7 @@ const Home = props => {
                     A small collection of NFTs that were free to mint, with
                     a twist. Only one NFT could be minted each day at 4:20pm ET
                     during the mint phase. Each NFT is a derivative of the #0
-                    NFTs from various CC0 collections. I careted the smart contract
+                    NFTs from various CC0 collections. I created the smart contract
                     and the front-end for minting the CC0 NFT collection.
                 </li>
                 <li>
