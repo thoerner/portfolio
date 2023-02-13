@@ -8,14 +8,14 @@ const Home = props => {
                 <span style={styles.heading}>About Me</span>
                 <p>
                     Hi, I'm crypt0potamus, a <span style={styles.highlight}>full-stack software and web developer</span> with a 
-                    passion utilizing the latest AI technologies to create 
+                    passion for utilizing the latest technologies to create 
                     innovative <span style={styles.highlight}>web3</span> and <span style={styles.highlight}>React</span> applications.
                     I specialize in the development of <span style={styles.highlight}>smart contracts</span> and 
-                    decentralized applications (<span style={styles.highlight}>dApps</span>) that not only utilize <span style={styles.highlight}>cutting-edge AI technology</span>,
-                    but also incorporate it as a key feature.
+                    decentralized applications (<span style={styles.highlight}>dApps</span>) that utilize <span style={styles.highlight}>cutting-edge AI technology</span>
+                    {" "}and even incorporate it as a key feature.
                 </p>
                 <p>
-                    I have a strong understanding of web3 technologies, AI algorithms, 
+                    I have a strong understanding of web3 technologies, AI and machine learning, 
                     and the ability to write <span style={styles.highlight}>secure, scalable, and maintainable code</span>. 
                     My goal is to push the boundaries of what is possible with these 
                     technologies and create truly groundbreaking web3 and AI-powered applications.
@@ -67,7 +67,7 @@ const Home = props => {
                     <li>
                         <a href="https://www.cc0mune.xyz/" target="_blank" rel="noreferrer">CC0mune</a>: 
                         A small collection of NFTs that were <span style={styles.highlight}>free to mint, with
-                        a twist</span>. Each day at 4:20pm ET, <span style={styles.highlight}>exactly one NFT was minted</span>,
+                        a twist</span>. At 4:20pm, <span style={styles.highlight}>exactly one NFT was minted each day</span>{" "}
                         during the mint phase. Each NFT is a derivative of the first minted
                         NFTs from various CC0 collections. I created the smart contract
                         and the front-end for minting the CC0 NFT collection.
