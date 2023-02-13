@@ -5,7 +5,7 @@ import {useWindowDimensions} from "../utils/tools";
 
 const MenuOverlay = props => {
   return (
-    <div style={styles.overlay}
+    <div style={props.menuOpen ? styles.overlay : styles.overlayHidden}
       onClick={() => props.onDismiss()}
     >
       <div style={styles.overlayContent}>
@@ -27,7 +27,7 @@ export const Navbar = () => {
 
   return (
     <nav style={styles.navbar}>
-      {menuOpen && <MenuOverlay onDismiss={handleMenuClick}/>}
+      <MenuOverlay onDismiss={handleMenuClick} menuOpen={menuOpen} />
       <div style={styles.logoContainer}>
         <a href="#"><img src={Hippo} alt="Hippo" width={ width > 768 ? 75 : 50 } /></a>
         {" "}<a href="#" style={{color: "white"}}><h2>crypt<span style={{color: '#cc00ff'}}>0</span>potam<span style={{color: '#cc00ff'}}>.</span>us</h2></a>
@@ -107,6 +107,19 @@ const styles = {
         bottom: 0,
         backgroundColor: 'rgba(0, 0, 0, 0.8)',
         zIndex: 1,
+        transition: 'opacity 0.5s ease',
+    },
+    overlayHidden: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        opacity: 0,
+        pointerEvents: 'none',
+        zIndex: -1,
+        transition: 'opacity 0.5s ease',
     },
     overlayContent: {
         position: 'absolute',
