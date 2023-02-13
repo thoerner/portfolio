@@ -78,8 +78,9 @@ const styles = {
     },
     address: {
         marginTop: '1rem',
-        backgroundColor: '#ccc',
+        backgroundColor: '#c0f',
         color: '#000',
+        fontWeight: '600',
         padding: '0.5rem 1rem',
         borderRadius: '0.25rem',
         minHeight: '2rem',
