@@ -36,7 +36,7 @@ const Home = props => {
                         A collection of 2,222 unique NFTs, designed
                         by John Born and friends. Each Goat Gauds NFT is
                         created from a unique combination of traits, that were
-                        combined using generative art algorithms. I also
+                        combined using generative art algorithms. I
                         created the smart contract to mint the NFTs and the 
                         staking contract to allow users to stake their Goat
                         Gauds NFTs and earn rewards in the form of FLWR$ tokens.
