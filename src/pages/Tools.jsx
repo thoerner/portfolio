@@ -32,12 +32,14 @@ const Tools = props => {
 
     return (
         <div style={styles.tools}>
-            <h2>Resolve ENS Address</h2>
-            <p>Enter an ENS address to resolve it to an Ethereum address.</p>
-            <input style={styles.input} type="text" value={ensAddress} onChange={handleEnsAddressChange} />
-            <p style={ethAddress !== '' ? styles.address : styles.noAddress} onClick={handleCopyAddress}>
-                { width > 512 ? ethAddress : ethAddress !== '' ? shortenAddress(ethAddress) : null }
-            </p>
+            <div style={styles.card}>
+                <h2>Resolve ENS Address</h2>
+                <p>Enter an ENS address to resolve it to an Ethereum address.</p>
+                <input style={styles.input} type="text" value={ensAddress} onChange={handleEnsAddressChange} />
+                <p style={ethAddress !== '' ? styles.address : styles.noAddress} onClick={handleCopyAddress}>
+                    { width > 512 ? ethAddress : ethAddress !== '' ? shortenAddress(ethAddress) : null }
+                </p>
+            </div>
         </div>
     );
 };
@@ -76,8 +78,8 @@ const styles = {
     },
     address: {
         marginTop: '1rem',
-        backgroundColor: '#000',
-        color: '#fff',
+        backgroundColor: '#ccc',
+        color: '#000',
         padding: '0.5rem 1rem',
         borderRadius: '0.25rem',
         minHeight: '2rem',
@@ -89,6 +91,18 @@ const styles = {
         padding: '0.5rem',
         minHeight: '2rem',
         lineHeight: '2rem',
+    },
+    card: {
+        backgroundColor: '#000',
+        padding: '2rem',
+        borderRadius: '0.25rem',
+        minHeight: '25vh',
+        minWidth: '25vw',
+        maxWidth: '90vw',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 };
 
