@@ -41,14 +41,16 @@ export const Navbar = () => {
       )}
       {width <= 768 && (
         <div style={styles.hamburgerBun} onClick={() => handleMenuClick()}>
-          <div style={styles.hamburger}></div>
-          <div style={styles.hamburger}></div>
-          <div style={styles.hamburger}></div>
+          <div style={!menuOpen ? styles.hamburger : styles.openHamburgerTop}></div>
+          <div style={!menuOpen ? styles.hamburger : styles.openHamburgerMiddle}></div>
+          <div style={!menuOpen ? styles.hamburger : styles.openHamburgerBottom}></div>
         </div>
       )}
     </nav>
   );
 }
+
+const hamburgerTransition = 'transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease'
 
 const styles = {
     logo: {
@@ -87,6 +89,8 @@ const styles = {
         height: '0.25rem',
         backgroundColor: 'white',
         margin: '0.25rem',
+        transition: hamburgerTransition,
+        transformOrigin: '4px 0px',
     },
     hamburgerBun: {
         display: 'flex',
@@ -119,5 +123,35 @@ const styles = {
         color: 'white',
         fontSize: '2rem',
         margin: '1rem',
+    },
+    openHamburgerTop: {
+        width: '2rem',
+        height: '0.25rem',
+        backgroundColor: 'white',
+        margin: '0.3rem',
+        transform: 'rotate(45deg) translate(-2px, -1px) scale(1.2, 1)',
+        zIndex: 1,
+        transformOrigin: '4px 0px',
+        transition: hamburgerTransition,
+    },
+    openHamburgerMiddle: { 
+        width: '2rem',
+        height: '0.25rem',
+        backgroundColor: 'white',
+        margin: '0.25rem',
+        transform: 'rotate(0deg) scale(0.2, 0.2)',
+        transformOrigin: '4px 0px',
+        opacity: 0,
+        transition: hamburgerTransition,
+    },
+    openHamburgerBottom: {
+        width: '2rem',
+        height: '0.25rem',
+        backgroundColor: 'white',
+        margin: '0.1rem',
+        transform: 'rotate(-45deg) translate(0, -5px) scale(1.2, 1)',
+        transformOrigin: '4px 0px',
+        zIndex: 1,
+        transition: hamburgerTransition,
     },
 };
