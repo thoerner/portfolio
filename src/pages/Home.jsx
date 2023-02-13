@@ -109,7 +109,7 @@ const styles = {
         padding: "0",
         maxWidth: "800px",
         margin: "0 auto",
-        marginTop: "4rem",
+        marginTop: "6rem",
         textAlign: "center",
         color: "#fff",
         fontSize: "1.2rem",
