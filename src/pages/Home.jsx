@@ -8,7 +8,7 @@ const Home = props => {
                 <span style={styles.heading}>About Me</span>
                 <p>
                     Hi, I'm crypt0potamus, a <span style={styles.highlight}>full-stack software and web developer</span> with a 
-                    passion for utilizing the latest technologies to create 
+                    passion for using the latest technologies to create 
                     innovative <span style={styles.highlight}>web3</span> and <span style={styles.highlight}>React</span> applications.
                     I specialize in the development of <span style={styles.highlight}>smart contracts</span> and 
                     decentralized applications (<span style={styles.highlight}>dApps</span>) that utilize <span style={styles.highlight}>cutting-edge AI technology</span>
