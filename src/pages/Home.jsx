@@ -46,8 +46,10 @@ const Home = props => {
                     <li>
                         <a href="https://www.googlyeyedrockclub.com/" target="_blank" rel="noreferrer">Googly Eyed Rock Club</a>: 
                         A collection of physical rocks with googly eyes curated by crypto influencer Gabriel Haines.
-                        I created the smart contract to mint the NFTs through a
-                        last-price Dutch auction.
+                        I created the smart contract to mint the NFTs through an innovative
+                        last-price Dutch auction, where the price of the NFTs
+                        decreased over time until the auction ended. Anyone that overbid
+                        the final bid was refunded the difference.
                     </li>
                     <li>
                         <a href="https://www.evobots.club/" target="_blank" rel="noreferrer">EVO Bots</a>: 

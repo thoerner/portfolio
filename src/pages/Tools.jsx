@@ -1,7 +1,7 @@
 const Tools = props => {
     return (
         <div style={styles.tools}>
-            <h1>Tools</h1>
+            <h2>Coming soon...</h2>
         </div>
     );
 };
