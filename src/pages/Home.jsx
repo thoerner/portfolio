@@ -106,7 +106,7 @@ const styles = {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "0 20px",
+        padding: "0",
         maxWidth: "800px",
         margin: "0 auto",
         marginTop: "4rem",
@@ -117,10 +117,11 @@ const styles = {
     },
     card: {
         padding: "1rem",
-        margin: "1rem",
+        marginTop: "1rem",
         backgroundColor: "#000",
         borderRadius: "0.5rem",
         boxShadow: "0 0 1rem rgba(0, 0, 0, 0.5)",
+        maxWidth: "95vw"
     },
 }
 
