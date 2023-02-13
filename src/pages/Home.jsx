@@ -15,7 +15,7 @@ const Home = props => {
                     {" "}and even incorporate it as a key feature.
                 </p>
                 <p>
-                    I have a strong understanding of web3 technologies, AI and machine learning, 
+                    I have a strong understanding of web3 technologies, modern web development frameworks, 
                     and the ability to write <span style={styles.highlight}>secure, scalable, and maintainable code</span>. 
                     My goal is to push the boundaries of what is possible with these 
                     technologies and create truly groundbreaking web3 and AI-powered applications.
