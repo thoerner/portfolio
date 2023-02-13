@@ -28,7 +28,7 @@ export const Navbar = () => {
     <nav style={styles.navbar}>
       {menuOpen && <MenuOverlay onDismiss={handleMenuClick}/>}
       <div style={styles.logoContainer}>
-        <img src={Hippo} alt="Hippo" width={ width > 768 ? 75 : 50 } />
+        <a href="#"><img src={Hippo} alt="Hippo" width={ width > 768 ? 75 : 50 } /></a>
         {" "}<h2>crypt<span style={{color: '#cc00ff'}}>0</span>potam<span style={{color: '#cc00ff'}}>.</span>us</h2>
       </div>
       {width > 768 && (
