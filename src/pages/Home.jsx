@@ -106,7 +106,7 @@ const Home = props => {
 
 const styles = {
     heading: {
-        fontSize: "clamp(3rem, 5vw, 4rem)",
+        fontSize: "clamp(2.5rem, 5vw, 4rem)",
         fontWeight: "bold",
         marginBottom: "0.5rem",
     },
