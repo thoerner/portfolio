@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Hippo from "../assets/hippo.svg"
-import useWindowDimensions from "../utils/winsize";
+import {useWindowDimensions} from "../utils/tools";
 
 const MenuOverlay = props => {
   return (
@@ -29,7 +29,7 @@ export const Navbar = () => {
       {menuOpen && <MenuOverlay onDismiss={handleMenuClick}/>}
       <div style={styles.logoContainer}>
         <a href="#"><img src={Hippo} alt="Hippo" width={ width > 768 ? 75 : 50 } /></a>
-        {" "}<h2>crypt<span style={{color: '#cc00ff'}}>0</span>potam<span style={{color: '#cc00ff'}}>.</span>us</h2>
+        {" "}<a href="#" style={{color: "white"}}><h2>crypt<span style={{color: '#cc00ff'}}>0</span>potam<span style={{color: '#cc00ff'}}>.</span>us</h2></a>
       </div>
       {width > 768 && (
         <div style={styles.links}>

@@ -8,7 +8,7 @@ function getWindowDimensions() {
   };
 }
 
-export default function useWindowDimensions() {
+export const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
@@ -21,4 +21,8 @@ export default function useWindowDimensions() {
   }, []);
 
   return windowDimensions;
+}
+
+export const shortenAddress = (address) => {
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
 }

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 import Home from './pages/Home'
 import Tools from './pages/Tools'
 import { Navbar } from './components'
+import { Toaster } from 'react-hot-toast'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <Toaster />
       <Navbar />
       <Router>
         {routes}

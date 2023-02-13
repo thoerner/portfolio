@@ -94,7 +94,7 @@ const Home = props => {
                         <b>Email</b>: <a href="mailto:dev@crypt0potam.us">dev@crypt0potam.us</a>
                     </li>
                     <li>
-                        <b>Discord</b>: <a href="https://discord.gg/5DZCrSZxWY" target="_blank" rel="noreferrer">crypt0potamus#2336</a>
+                        <b>Discord</b>: <a href="https://discord.gg/5DZCrSZxWY" target="_blank" rel="noreferrer">crypt0potamus#2446</a>
                     </li>
                 </ul>
             </div>
