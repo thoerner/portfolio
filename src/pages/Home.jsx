@@ -81,8 +81,8 @@ const Home = props => {
                     I would be happy to hear from you and discuss your project in more detail.
                 </p>
             </div>
-            <div style={styles.card}>
-                <h1 id="contact">Get in Touch</h1>
+            <div style={styles.card}  id="contact" name="contact">
+                <h1>Get in Touch</h1>
                 <p>
                     You can contact me through the following methods:
                 </p>

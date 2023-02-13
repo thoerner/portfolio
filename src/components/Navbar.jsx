@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Hippo from "../assets/hippo.svg"
 import {useWindowDimensions} from "../utils/tools";
 
@@ -10,6 +10,7 @@ const MenuOverlay = props => {
       <div style={styles.overlayContent}>
         <a style={styles.overlayLink} href="/">Home</a>
         <a style={styles.overlayLink} href="/tools">Tools</a>
+        <a style={styles.overlayLink} href="/mint">Mint</a>
         <a style={styles.overlayLink} href="/#contact">Contact</a>
       </div>
     </div>
@@ -35,6 +36,7 @@ export const Navbar = () => {
         <div style={styles.links}>
           <a style={styles.link} href="/">Home</a>
           <a style={styles.link} href="/tools">Tools</a>
+          <a style={styles.link} href="/mint">Mint</a>
           <a style={styles.link} href="/#contact">Contact</a>
         </div>
       )}
