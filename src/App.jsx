@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Tools from './pages/Tools'
 import Mint from './pages/Mint'
@@ -21,9 +21,7 @@ function App() {
     <div className="App">
       <Toaster />
       <Navbar />
-      <Router>
-        {routes}
-      </Router>
+      {routes}
     </div>
   )
 }

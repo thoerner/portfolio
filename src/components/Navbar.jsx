@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import Hippo from "../assets/hippo.svg"
 import {useWindowDimensions} from "../utils/tools";
 
@@ -8,10 +9,9 @@ const MenuOverlay = props => {
       onClick={() => props.onDismiss()}
     >
       <div style={styles.overlayContent}>
-        <a style={styles.overlayLink} href="/">Home</a>
-        <a style={styles.overlayLink} href="/tools">Tools</a>
-        <a style={styles.overlayLink} href="/mint">Mint</a>
-        <a style={styles.overlayLink} href="/#contact">Contact</a>
+        <Link to="/" style={styles.overlayLink}>Home</Link>
+        <Link to="/tools" style={styles.overlayLink}>Tools</Link>
+        <Link to="/mint" style={styles.overlayLink}>Mint</Link>
       </div>
     </div>
   )
@@ -34,10 +34,9 @@ export const Navbar = () => {
       </div>
       {width > 768 && (
         <div style={styles.links}>
-          <a style={styles.link} href="/">Home</a>
-          <a style={styles.link} href="/tools">Tools</a>
-          <a style={styles.link} href="/mint">Mint</a>
-          <a style={styles.link} href="/#contact">Contact</a>
+          <Link to="/" style={styles.link}>Home</Link>
+          <Link to="/tools" style={styles.link}>Tools</Link>
+          <Link to="/mint" style={styles.link}>Mint</Link>
         </div>
       )}
       {width <= 768 && (
