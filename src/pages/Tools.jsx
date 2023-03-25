@@ -35,7 +35,7 @@ const Tools = props => {
             <div style={styles.card}>
                 <h2>Resolve ENS Address</h2>
                 <p>Enter an ENS address to resolve it to an Ethereum address.</p>
-                <input style={styles.input} type="text" value={ensAddress} onChange={handleEnsAddressChange} />
+                <input style={styles.input} type="text" placeholder="e.g. crypt0potamus.eth" value={ensAddress} onChange={handleEnsAddressChange} />
                 <p style={ethAddress !== '' ? styles.address : styles.noAddress} onClick={handleCopyAddress}>
                     { width > 512 ? ethAddress : ethAddress !== '' ? shortenAddress(ethAddress) : null }
                 </p>
