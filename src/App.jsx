@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Tools from './pages/Tools'
 import Mint from './pages/Mint'
+import Services from './pages/Services'
 import { Navbar } from './components'
 import { Toaster } from 'react-hot-toast'
 import './App.css'
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/tools" element={<Tools />} />
       <Route path="/mint" element={<Mint />} />
+      <Route path="/services" element={<Services />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   )
