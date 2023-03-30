@@ -40,6 +40,14 @@ const Tools = props => {
                     { width > 512 ? ethAddress : ethAddress !== '' ? shortenAddress(ethAddress) : null }
                 </p>
             </div>
+            <div style={styles.card}>
+                <h2>Gitbook AI</h2>
+                <p style={styles.subtitle}>A next.js app that uses Langchain's Gitbook document loader and sends it to a Pinecone vector store where it can be queried using OpenAI's GPT-4 API.</p>
+                <p>A tool to help you make sense of a few Decentralized Finance (DeFi) protocols and their tokenomics.</p>
+                <a href="https://gitbook-ai.crypt0potam.us/" target="_blank" rel="noreferrer">
+                    <button style={styles.button}>Go to Gitbook AI</button>
+                </a>
+            </div>
         </div>
     );
 };
@@ -49,11 +57,11 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         padding: '0 20px',
         maxWidth: '800px',
         margin: '0 auto',
-        marginTop: '4rem',
+        marginTop: '7rem',
         textAlign: 'center',
         color: '#fff',
         fontSize: '1.2rem',
@@ -104,7 +112,14 @@ const styles = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        margin: '1rem',
     },
+    subtitle: {
+        fontSize: '1rem',
+        lineHeight: '1.5',
+        marginBottom: '1rem',
+        color: '#c0f',
+    }
 };
 
 export default Tools;
