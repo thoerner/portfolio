@@ -12,7 +12,6 @@ const MenuOverlay = props => {
         <Link to="/" style={styles.overlayLink}>Home</Link>
         <Link to="/tools" style={styles.overlayLink}>Tools</Link>
         <Link to="/mint" style={styles.overlayLink}>Mint</Link>
-        <Link to="/services" style={styles.overlayLink}>Services</Link>
       </div>
     </div>
   )
@@ -38,7 +37,6 @@ export const Navbar = () => {
           <Link to="/" style={styles.link}>Home</Link>
           <Link to="/tools" style={styles.link}>Tools</Link>
           <Link to="/mint" style={styles.link}>Mint</Link>
-          <Link to="/services" style={styles.link}>Services</Link>
         </div>
       )}
       {width <= 768 && (
