@@ -1,51 +1,28 @@
-import { useState, useEffect } from "react";
-import { getEnsAddress } from "../utils/alchemy";
-import toast from "react-hot-toast";
-import {useWindowDimensions, shortenAddress} from "../utils/tools";
-
-const Tools = props => {
-    const [ensAddress, setEnsAddress] = useState('');
-    const [ethAddress, setEthAddress] = useState('');
-    const { width } = useWindowDimensions();
-
-    useEffect(() => {
-        if (ensAddress.endsWith('.eth')) {
-            handleResolveEnsAddress();
-        } else {
-            setEthAddress('');
-        }
-    }, [ensAddress])
-
-    const handleEnsAddressChange = e => {
-        setEnsAddress(e.target.value);
-    }
-
-    const handleResolveEnsAddress = async () => {
-        const ethAddress = await getEnsAddress(ensAddress);
-        setEthAddress(ethAddress);
-    }
-
-    const handleCopyAddress = () => {
-        navigator.clipboard.writeText(ethAddress);
-        toast.success('Copied to clipboard!');
-    }
+const Apps = props => {
 
     return (
-        <div style={styles.tools}>
+        <div style={styles.apps}>
             <div style={styles.card}>
-                <h2>Resolve ENS Address</h2>
-                <p>Enter an ENS address to resolve it to an Ethereum address.</p>
-                <input style={styles.input} type="text" placeholder="e.g. crypt0potamus.eth" value={ensAddress} onChange={handleEnsAddressChange} />
-                <p style={ethAddress !== '' ? styles.address : styles.noAddress} onClick={handleCopyAddress}>
-                    { width > 512 ? ethAddress : ethAddress !== '' ? shortenAddress(ethAddress) : null }
-                </p>
+                <h2>Gitbook AI</h2>
+                <p style={styles.subtitle}>A next.js app that uses Langchain's Gitbook document loader and sends it to a Pinecone vector store where it can be queried using OpenAI's GPT-4 API.</p>
+                <p>A tool to help you make sense of a few Decentralized Finance (DeFi) protocols and their tokenomics.</p>
+                <a href="https://gitbook-ai.crypt0potam.us/" target="_blank" rel="noreferrer">
+                    <button style={styles.button}>Go to Gitbook AI</button>
+                </a>
+            </div>
+            <div style={styles.card}>
+                <h2>Radi Wizard AI</h2>
+                <p>A collection of AI-powered chat bots with fun and interesting personalities, including a text-based AI dungeon crawl!</p>
+                <a href="https://radi.crypt0potam.us/" target="_blank" rel="noreferrer">
+                    <button style={styles.button}>Go to Radi Wizard AI</button>
+                </a>
             </div>
         </div>
     );
 };
 
 const styles = {
-    tools: {
+    apps: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -114,4 +91,4 @@ const styles = {
     }
 };
 
-export default Tools;
+export default Apps;
