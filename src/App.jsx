@@ -15,7 +15,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/tools" element={<Tools />} />
       <Route path="/mint" element={<Mint />} />
-      <Route path="/apps" element={<Apps />} />
+      {/* <Route path="/apps" element={<Apps />} /> */}
       <Route path="/services" element={<Services />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
