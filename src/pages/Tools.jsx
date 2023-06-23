@@ -66,6 +66,8 @@ const styles = {
         border: 'none',
         borderRadius: '0.25rem',
         marginBottom: '0.5rem',
+        backgroundColor: '#F2E9E4',
+        color: '#22223B'
     },
     button: {
         padding: '0.5rem 1rem',
