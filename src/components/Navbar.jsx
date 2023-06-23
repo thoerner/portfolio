@@ -9,10 +9,10 @@ const MenuOverlay = props => {
       onClick={() => props.onDismiss()}
     >
       <div style={styles.overlayContent}>
-        <Link to="/" style={styles.overlayLink}>Home</Link>
-        <Link to="/tools" style={styles.overlayLink}>Tools</Link>
-        {/* <Link to="/apps" style={styles.overlayLink}>Apps</Link> */}
-        <Link to="/mint" style={styles.overlayLink}>Mint</Link>
+        <Link to="/" className="link" style={styles.overlayLink}>Home</Link>
+        <Link to="/tools" className="link" style={styles.overlayLink}>Tools</Link>
+        {/* <Link to="/apps" className="link" style={styles.overlayLink}>Apps</Link> */}
+        <Link to="/mint" className="link" style={styles.overlayLink}>Mint</Link>
       </div>
     </div>
   )
@@ -31,14 +31,14 @@ export const Navbar = () => {
       <MenuOverlay onDismiss={handleMenuClick} menuOpen={menuOpen} />
       <div style={styles.logoContainer}>
         <a href="#"><img src={Hippo} alt="Hippo" width={ width > 768 ? 75 : 50 } /></a>
-        {" "}<a href="#" style={{color: "white"}}><h2>crypt<span style={{color: '#cc00ff'}}>0</span>potam<span style={{color: '#cc00ff'}}>.</span>us</h2></a>
+        {" "}<a href="#"><h2 style={{color: "#F2E9E4"}}>crypt<span style={{color: '#E9C46A'}}>0</span>potam<span style={{color: '#E9C46A'}}>.</span>us</h2></a>
       </div>
       {width > 768 && (
         <div style={styles.links}>
-          <Link to="/" style={styles.link}>Home</Link>
-          <Link to="/tools" style={styles.link}>Tools</Link>
-          {/* <Link to="/apps" style={styles.link}>Apps</Link> */}
-          <Link to="/mint" style={styles.link}>Mint</Link>
+          <Link to="/" className="link" style={styles.link}>Home</Link>
+          <Link to="/tools" className="link" style={styles.link}>Tools</Link>
+          {/* <Link to="/apps" className="link" style={styles.link}>Apps</Link> */}
+          <Link to="/mint" className="link" style={styles.link}>Mint</Link>
         </div>
       )}
       {width <= 768 && (
@@ -53,6 +53,7 @@ export const Navbar = () => {
 }
 
 const hamburgerTransition = 'transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease'
+const linkEnlargeTransition = 'transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease'
 
 const styles = {
     logo: {
@@ -71,10 +72,11 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: 'black',
+        backgroundColor: '#22223B',
         color: 'white',
         padding: '1rem 1.5rem',
         height: '4rem',
+        boxShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
     },
     links: {
         display: 'flex',
@@ -84,12 +86,14 @@ const styles = {
     link: {
         marginLeft: '1rem',
         textDecoration: 'none',
-        color: 'white',
+        color: '#F2E9E4',
+        fontSize: '1rem',
+        transition: linkEnlargeTransition,
     },
     hamburger: {
         width: '2rem',
         height: '0.25rem',
-        backgroundColor: 'white',
+        backgroundColor: '#F2E9E4',
         margin: '0.25rem',
         transition: hamburgerTransition,
         transformOrigin: '4px 0px',
@@ -135,14 +139,14 @@ const styles = {
     },
     overlayLink: {
         textDecoration: 'none',
-        color: 'white',
+        color: '#F2E9E4',
         fontSize: '2rem',
         margin: '1rem',
     },
     openHamburgerTop: {
         width: '2rem',
         height: '0.25rem',
-        backgroundColor: 'white',
+        backgroundColor: '#F2E9E4',
         margin: '0.3rem',
         transform: 'rotate(45deg) translate(-2px, -1px) scale(1.2, 1)',
         zIndex: 1,
@@ -152,7 +156,7 @@ const styles = {
     openHamburgerMiddle: { 
         width: '2rem',
         height: '0.25rem',
-        backgroundColor: 'white',
+        backgroundColor: '#F2E9E4',
         margin: '0.25rem',
         transform: 'rotate(0deg) scale(0.2, 0.2)',
         transformOrigin: '4px 0px',
@@ -162,7 +166,7 @@ const styles = {
     openHamburgerBottom: {
         width: '2rem',
         height: '0.25rem',
-        backgroundColor: 'white',
+        backgroundColor: '#F2E9E4',
         margin: '0.1rem',
         transform: 'rotate(-45deg) translate(0, -5px) scale(1.2, 1)',
         transformOrigin: '4px 0px',

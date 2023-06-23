@@ -109,6 +109,7 @@ const styles = {
         fontSize: "clamp(2.5rem, 5vw, 4rem)",
         fontWeight: "bold",
         marginBottom: "0.5rem",
+        color: "#F2E9E4"
     },
     home: {
         display: "flex",
@@ -120,21 +121,21 @@ const styles = {
         margin: "0 auto",
         marginTop: "6rem",
         textAlign: "center",
-        color: "#fff",
+        color: "#F2E9E4",
         fontSize: "1.2rem",
         lineHeight: "1.5",
     },
     card: {
         padding: "1rem",
         margin: "1rem",
-        backgroundColor: "#000",
+        backgroundColor: "#4A4E69",
         borderRadius: "0.5rem",
         boxShadow: "0 0 1rem rgba(0, 0, 0, 0.5)",
         maxWidth: "95vw",
         minWidth: "25vw"
     },
     highlight: {
-        color: "#c0f",
+        color: "#E9C46A",
         fontWeight: "600"
     },
     icon: {

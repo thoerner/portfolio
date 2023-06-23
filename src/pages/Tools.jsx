@@ -55,7 +55,7 @@ const styles = {
         margin: '0 auto',
         marginTop: '7rem',
         textAlign: 'center',
-        color: '#fff',
+        color: '#F2E9E4',
         fontSize: '1.2rem',
         lineHeight: '1.5',
     },
@@ -78,7 +78,7 @@ const styles = {
     },
     address: {
         marginTop: '1rem',
-        backgroundColor: '#c0f',
+        backgroundColor: '#9A8C98',
         color: '#000',
         fontWeight: '600',
         padding: '0.5rem 1rem',
@@ -94,7 +94,7 @@ const styles = {
         lineHeight: '2rem',
     },
     card: {
-        backgroundColor: '#000',
+        backgroundColor: '#4A4E69',
         padding: '2rem',
         borderRadius: '0.25rem',
         minHeight: '25vh',
@@ -104,7 +104,7 @@ const styles = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '1rem',
+        margin: '1rem'
     },
     subtitle: {
         fontSize: '1rem',
