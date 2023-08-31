@@ -7,23 +7,23 @@ const Home = props => {
             <div style={styles.card}>
                 <span style={styles.heading}>About Me</span>
                 <p>
-                    Hi, I'm crypt0potamus, a <span style={styles.highlight}>full-stack software and web developer</span> with a 
-                    passion for using the latest technologies to create 
+                    Hi, I'm crypt0potamus, a <span style={styles.highlight}>full-stack software and web developer</span> with a
+                    passion for using the latest technologies to create
                     innovative <span style={styles.highlight}>web3</span> and <span style={styles.highlight}>React</span> applications.
-                    I specialize in the development of <span style={styles.highlight}>smart contracts</span> and 
+                    I specialize in the development of <span style={styles.highlight}>smart contracts</span> and
                     decentralized applications (<span style={styles.highlight}>dApps</span>) that utilize <span style={styles.highlight}>cutting-edge AI technology</span>
                     {" "}and even incorporate it as a key feature.
                 </p>
                 <p>
-                    I have a strong understanding of web3 technologies, modern web development frameworks, 
-                    and the ability to write <span style={styles.highlight}>secure, scalable, and maintainable code</span>. 
-                    My goal is to push the boundaries of what is possible with these 
+                    I have a strong understanding of web3 technologies, modern web development frameworks,
+                    and the ability to write <span style={styles.highlight}>secure, scalable, and maintainable code</span>.
+                    My goal is to push the boundaries of what is possible with these
                     technologies and create truly groundbreaking web3 and AI-powered applications.
                 </p>
                 <p>
-                    I am always open to new projects and opportunities to work with companies 
-                    and individuals who share my <span style={styles.highlight}>passion for innovative technology</span>. Whether 
-                    you need assistance with a project or are looking for a talented developer 
+                    I am always open to new projects and opportunities to work with companies
+                    and individuals who share my <span style={styles.highlight}>passion for innovative technology</span>. Whether
+                    you need assistance with a project or are looking for a talented developer
                     to <span style={styles.highlight}>bring your ideas to life</span>, I would be honored to help.
                 </p>
             </div>
@@ -35,61 +35,46 @@ const Home = props => {
                 </p>
                 <ul>
                     <li>
-                        <a href="https://app.goatgauds.com/" target="_blank" rel="noreferrer">Goat Gauds</a>: 
-                        A collection of 2,222 unique NFTs, designed
-                        by John Born and friends. Each Goat Gauds NFT is
-                        created from a unique combination of traits, that were
-                        combined using <span style={styles.highlight}>generative art algorithms</span>. I
-                        created the <span style={styles.highlight}>smart contract</span> to mint the NFTs and the 
-                        {" "}<span style={styles.highlight}>staking contract</span> to allow users to stake their Goat
-                        Gauds NFTs and earn rewards in the form of <span style={styles.highlight}>FLWR$ tokens</span>.
-                        Additionally, I created an <span style={styles.highlight}>AI-powered Discord chat bot</span>, aka 'Goat Bot', 
-                        that allows users to interact with the Goat Gauds NFT collection,
-                        and a <span style={styles.highlight}>voting system</span> that allows NFT holders to vote on important decisions
-                        for the Goat Gauds community.
+                        <a href="https://radi.crypt0potam.us/" target="_blank" rel="noreferrer">Radi AI</a>:
+                        A state-of-the-art AI platform, Radi AI leverages the power of the <span style={styles.highlight}>OpenAI API</span> to provide conversational agents capable of answering a wide array of queries. I designed and implemented the <span style={styles.highlight}>Natural Language Processing algorithms</span> that enable real-time conversation with the AI personalities. Radi AI isn't just a Q&A bot; it can <span style={styles.highlight}>remember information</span>, provide <span style={styles.highlight}>coding help</span>, and even <span style={styles.highlight}>generate human-like text</span> for various applications. It's hosted on a <span style={styles.highlight}>serverless AWS architecture</span>, ensuring high availability and scalability to handle concurrent conversations. In addition, the platform is designed with a <span style={styles.highlight}>responsive UI</span> that adjusts to both mobile and desktop environments.
                     </li>
                     <li>
-                        <a href="https://www.googlyeyedrockclub.com/" target="_blank" rel="noreferrer">Googly Eyed Rock Club</a>: 
-                        A collection of physical rocks with googly eyes curated by crypto influencer Gabriel Haines.
-                        I created the smart contract to mint the NFTs through an innovative
-                        {" "}<span style={styles.highlight}>Last Price Dutch Auction</span>, where the price of the NFTs
-                        decreased over time until the auction ended. Anyone that overbid
-                        the final bid was refunded the difference.
-                    </li>
-                    <li>
-                        <a href="https://www.evobots.club/" target="_blank" rel="noreferrer">EVO Bots</a>: 
+                        <a href="https://www.evobots.club/" target="_blank" rel="noreferrer">EVO Bots</a>:
                         An add-on NFT collection for the upcoming
-                        {" "}<a href="https://cryptocave.club/" target="_blank" rel="noreferrer">Crypto Cave Club</a> web3 game. 
+                        {" "}<a href="https://cryptocave.club/" target="_blank" rel="noreferrer">Crypto Cave Club</a> web3 game.
                         I created the smart contract and the front-end for minting the EVO Bots NFT collection, and an
-                        innovative system that allows the EVO Bots NFTs to <span style={styles.highlight}>unlock and reveal</span> a <span style={styles.highlight}>companion trait</span>{" "} 
+                        innovative system that allows the EVO Bots NFTs to <span style={styles.highlight}>unlock and reveal</span> a <span style={styles.highlight}>companion trait</span>{" "}
                         when they are used <span style={styles.highlight}>socially on Twitter</span>.
                     </li>
                     <li>
-                        <a href="https://www.cc0mune.xyz/" target="_blank" rel="noreferrer">CC0mune</a>: 
+                        <a href="https://www.cc0mune.xyz/" target="_blank" rel="noreferrer">CC0mune</a>:
                         A small collection of NFTs that were <span style={styles.highlight}>free to mint, with
-                        a twist</span>. At 4:20pm, <span style={styles.highlight}>exactly one NFT was minted each day</span>{" "}
+                            a twist</span>. At 4:20pm, <span style={styles.highlight}>exactly one NFT was minted each day</span>{" "}
                         during the mint phase. Each NFT is a derivative of the first minted
                         NFTs from various CC0 collections. I created the smart contract
                         and the front-end for minting the CC0 NFT collection.
                     </li>
                     <li>
-                        <a href="https://www.cryptobidz.com/" target="_blank" rel="noreferrer">Cryptobidz</a>: 
-                        Currently under development, and <span style={styles.highlight}>my most ambitious
-                        project to date</span>, Cryptobidz is an upcoming <span style={styles.highlight}>decentralized penny auction platform</span>{" "} 
-                        that allows users to bid on NFTs using an ERC-1155 BIDZ token.
+                        <a href="https://docs.the3dkings.io/" target="_blank" rel="noreferrer">Lazy Butts</a>:
+                        Currently under development, Lazy Butts is an unofficial <span style={styles.highlight}>add-on NFT collection</span>{" "}
+                        for Lazy Lions NFT holders. Each Lazy Butt NFT corresponds to a Lazy Lion NFT, and represents 
+                        the <span style={styles.highlight}>bottom half</span> of that lion. I created the smart contract
+                        and the front-end for minting the Lazy Butt NFT collection, as well as the <span style={styles.highlight}>back-end</span> for
+                        the <span style={styles.highlight}>Lazy Butt NFT reveal</span> system. I also created a <span style={styles.highlight}>token-gated</span> image
+                        download system that allows Lazy Butt NFT holders to download the <span style={styles.highlight}>full image</span> of their Lazy Lion.
                     </li>
                 </ul>
             </div>
             <div style={styles.card}>
                 <span style={styles.heading}>Open for Work</span>
                 <p>
-                    If you have a project you would like to discuss or if you are 
+                    If you have a project you would like to discuss or if you are
                     looking for a <span style={styles.highlight}>web3 and React developer</span>,
-                    please don't hesitate to <span style={styles.highlight}>contact me</span>. 
+                    please don't hesitate to <span style={styles.highlight}>contact me</span>.
                     I would be happy to hear from you and <span style={styles.highlight}>discuss your project</span> in more detail.
                 </p>
             </div>
-            <div style={styles.card}  id="contact" name="contact">
+            <div style={styles.card} id="contact" name="contact">
                 <span style={styles.heading}>Get in Touch</span>
                 <ul>
                     <li>
