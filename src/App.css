@@ -7,3 +7,7 @@
 .link:hover {
   transform: scale(1.2);
 }
+
+.articleContent {
+  font-size: 1.5rem;
+}

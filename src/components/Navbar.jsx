@@ -38,6 +38,7 @@ export const Navbar = () => {
           <Link to="/" className="link" style={styles.link}>Home</Link>
           <Link to="/tools" className="link" style={styles.link}>Tools</Link>
           {/* <Link to="/apps" className="link" style={styles.link}>Apps</Link> */}
+          <Link to="/articles" className="link" style={styles.link}>Articles</Link>
           <Link to="/mint" className="link" style={styles.link}>Mint</Link>
         </div>
       )}
