@@ -31,7 +31,7 @@ const Article = () => {
             <div className='article'>
                 <div className='title'>{data?.title}</div>
                 <div className='author'>by {data?.author}</div>
-                <div className='date'><i>{new Date(data?.date).toLocaleDateString()}</i></div>
+                <div className='date'><i>{new Date(data?.date).toLocaleDateString('en-US', {timeZone: 'UTC'})}</i></div>
                 <div className='articleContent' style={styles.articleContent}>
                     <div dangerouslySetInnerHTML={{ __html: html }} />
                 </div>

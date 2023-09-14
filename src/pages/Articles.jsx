@@ -29,7 +29,7 @@ const Articles = (props) => {
         return (
             data?.map((article, index) => (
                 <div className='articleListing'>
-                    <div className='articleDate'>{new Date(article.date).toLocaleDateString()}</div>
+                    <div className='articleDate'>{new Date(article.date).toLocaleDateString('en-US', {timeZone: 'UTC'})}</div>
                     {" "}
                     <Link className='articleLink' key={index} to={`/articles/${index}`}>
                         {article.title}
