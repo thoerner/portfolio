@@ -28,7 +28,7 @@ const Article = () => {
 
     return (
         <div style={styles.articlePage}>
-            <div className='article' style={styles.article}>
+            <div className='article'>
                 <div className='title'>{data?.title}</div>
                 <div className='author'>by {data?.author}</div>
                 <div className='date'><i>{new Date(data?.date).toLocaleDateString()}</i></div>
@@ -50,14 +50,6 @@ const styles = {
         alignItems: 'center',
         marginTop: '75px'
     },
-    article: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        width: '100vw',
-        maxWidth: '1000px',
-        padding: '2rem',
-    },
+
 
 }
