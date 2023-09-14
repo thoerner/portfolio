@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getArticle } from '../utils/api'
 import { marked } from 'marked'
+import '../styles/article.css'
 
 const Article = () => {
     const [content, setContent] = useState(null)
@@ -27,11 +28,13 @@ const Article = () => {
 
     return (
         <div style={styles.articlePage}>
-            <h1>{data?.title}</h1>
-            <h3>by {data?.author}</h3>
-            <h3>{new Date(data?.date).toLocaleDateString()}</h3>
-            <div className='articleContent' style={styles.articleContent}>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div className='article' style={styles.article}>
+                <div className='title'>{data?.title}</div>
+                <div className='author'>by {data?.author}</div>
+                <div className='date'><i>{new Date(data?.date).toLocaleDateString()}</i></div>
+                <div className='articleContent' style={styles.articleContent}>
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                </div>
             </div>
         </div>
     )
@@ -47,11 +50,14 @@ const styles = {
         alignItems: 'center',
         marginTop: '75px'
     },
-    articleContent: {
-        width: '50vw',
-        backgroundColor: '#9A8C98aa',
+    article: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        width: '100vw',
+        maxWidth: '1000px',
         padding: '2rem',
-        borderRadius: '0.5rem',
-        margin: '2rem',
-    }
+    },
+
 }

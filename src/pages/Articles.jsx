@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { getArticle } from '../utils/api'
 import { useState, useEffect } from 'react'
+import '../styles/articles.css' 
 
 const Articles = (props) => {
     const [data, setData] = useState([])
@@ -27,10 +28,10 @@ const Articles = (props) => {
     const renderLinks = () => {
         return (
             data?.map((article, index) => (
-                <div style={styles.articleListing}>
-                    <div style={styles.articleDate}>{new Date(article.date).toLocaleDateString()}</div>
+                <div className='articleListing'>
+                    <div className='articleDate'>{new Date(article.date).toLocaleDateString()}</div>
                     {" "}
-                    <Link key={index} to={`/articles/${index}`}>
+                    <Link className='articleLink' key={index} to={`/articles/${index}`}>
                         {article.title}
                     </Link>
                 </div>
@@ -39,7 +40,7 @@ const Articles = (props) => {
     }
 
     return (
-        <div style={styles.articlesPage}>
+        <div className='articlesPage'>
             <h1>Articles</h1>
             {renderLinks()}
         </div>
@@ -47,22 +48,3 @@ const Articles = (props) => {
 }
 
 export default Articles
-
-const styles = {
-    articlesPage: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        minHeight: '90vh',
-        marginTop: '75px'
-    },
-    articleListing: {
-        display: 'flex',
-        flexDirection: 'row',
-    },
-    articleDate: {
-        marginRight: '0.5rem'
-    }
-
-}

@@ -12,6 +12,7 @@ const MenuOverlay = props => {
         <Link to="/" className="link" style={styles.overlayLink}>Home</Link>
         <Link to="/tools" className="link" style={styles.overlayLink}>Tools</Link>
         {/* <Link to="/apps" className="link" style={styles.overlayLink}>Apps</Link> */}
+        <Link to="/articles" className="link" style={styles.overlayLink}>Articles</Link>
         <Link to="/mint" className="link" style={styles.overlayLink}>Mint</Link>
       </div>
     </div>
@@ -38,7 +39,7 @@ export const Navbar = () => {
           <Link to="/" className="link" style={styles.link}>Home</Link>
           <Link to="/tools" className="link" style={styles.link}>Tools</Link>
           {/* <Link to="/apps" className="link" style={styles.link}>Apps</Link> */}
-          {/* <Link to="/articles" className="link" style={styles.link}>Articles</Link> */}
+          <Link to="/articles" className="link" style={styles.link}>Articles</Link>
           <Link to="/mint" className="link" style={styles.link}>Mint</Link>
         </div>
       )}

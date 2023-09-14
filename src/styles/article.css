@@ -1,0 +1,78 @@
+h1,
+h2,
+h3 {
+    color: rgb(233, 196, 106);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    color: rgb(233, 196, 106);
+}
+
+.author {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: rgb(242, 233, 228);
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: rgb(242, 233, 228);
+}
+
+.article {
+    margin: 1rem 0;
+    color: rgb(242, 233, 228);
+}
+
+.articleContent {
+    margin: 1rem 0;
+    color: rgb(242, 233, 228);
+    width: 50vw;
+    background-color: rgb(74, 78, 105);
+    color: rgb(242, 233, 228);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .articleContent {
+        width: 80vw;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .author {
+        font-size: 1rem;
+    }
+    .date {
+        font-size: 0.75rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: rgb(233, 196, 106);
+    }
+}
