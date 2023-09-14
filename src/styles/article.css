@@ -39,6 +39,11 @@ h3 {
     padding: 2rem;
     border-radius: 0.5rem;
     margin: 2rem;
+    text-align: justify;
+}
+
+.articleContent h1, h2, h3 {
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
