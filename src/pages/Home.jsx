@@ -7,24 +7,15 @@ const Home = props => {
             <div style={styles.card}>
                 <span style={styles.heading}>About Me</span>
                 <p>
-                    Hi, I'm crypt0potamus, a <span style={styles.highlight}>full-stack software and web developer</span> with a
-                    passion for using the latest technologies to create
-                    innovative <span style={styles.highlight}>web3</span> and <span style={styles.highlight}>React</span> applications.
-                    I specialize in the development of <span style={styles.highlight}>smart contracts</span> and
-                    decentralized applications (<span style={styles.highlight}>dApps</span>) that utilize <span style={styles.highlight}>cutting-edge AI technology</span>
-                    {" "}and even incorporate it as a key feature.
+                    Hey there, I'm crypt0potamus—a <span style={styles.highlight}>full-stack wizard</span> who thrives in the
+                    crossroads of <span style={styles.highlight}>Web3</span>, <span style={styles.highlight}>AI</span>, and <span style={styles.highlight}>React</span>. When I'm not dabbling in <span style={styles.highlight}>smart contract magic</span> with <span style={styles.highlight}>Solidity</span>, I'm building{" "}
+                    <span style={styles.highlight}>dApps</span> that not just use, but actually feature, <span style={styles.highlight}>cutting-edge AI tech</span>.
                 </p>
                 <p>
-                    I have a strong understanding of web3 technologies, modern web development frameworks,
-                    and the ability to write <span style={styles.highlight}>secure, scalable, and maintainable code</span>.
-                    My goal is to push the boundaries of what is possible with these
-                    technologies and create truly groundbreaking web3 and AI-powered applications.
+                    My toolkit? Think a rock-solid grasp of <span style={styles.highlight}>web3 paradigms</span>, fluency in modern web frameworks, and the chops to churn out <span style={styles.highlight}>secure, scalable, and high-performance code</span>. I'm all about pushing the tech envelope and concocting web3 and AI marvels that are in a league of their own.
                 </p>
                 <p>
-                    I am always open to new projects and opportunities to work with companies
-                    and individuals who share my <span style={styles.highlight}>passion for innovative technology</span>. Whether
-                    you need assistance with a project or are looking for a talented developer
-                    to <span style={styles.highlight}>bring your ideas to life</span>, I would be honored to help.
+                    Open for collabs? You bet! Whether you're a startup or a tech guru with a grand vision, if you share my <span style={styles.highlight}>zeal for disruptive tech</span>, I'm your go-to guy for <span style={styles.highlight}>turning those big ideas into digital reality</span>.
                 </p>
             </div>
             <div style={styles.card}>
@@ -35,33 +26,21 @@ const Home = props => {
                 </p>
                 <ul>
                     <li>
-                        <a href="https://radi.crypt0potam.us/" target="_blank" rel="noreferrer">Radi AI</a>:
-                        A state-of-the-art AI platform, Radi AI leverages the power of the <span style={styles.highlight}>OpenAI API</span> to provide conversational agents capable of answering a wide array of queries. I designed and implemented the <span style={styles.highlight}>Natural Language Processing algorithms</span> that enable real-time conversation with the AI personalities. Radi AI isn't just a Q&A bot; it can <span style={styles.highlight}>remember information</span>, provide <span style={styles.highlight}>coding help</span>, and even <span style={styles.highlight}>generate human-like text</span> for various applications. It's hosted on a <span style={styles.highlight}>serverless AWS architecture</span>, ensuring high availability and scalability to handle concurrent conversations. In addition, the platform is designed with a <span style={styles.highlight}>responsive UI</span> that adjusts to both mobile and desktop environments.
+                        <a href="https://butts.the3dkings.io/" target="_blank" rel="noreferrer">Lazy Butts (A 3D Kings Project)</a>:
+                        Recently launched, Lazy Butts is an unofficial project that enriches the Lazy Lions ecosystem with a unique <span style={styles.highlight}>add-on NFT collection</span>. Tailored for each Lazy Lion NFT, Lazy Butt NFTs serve as the bottom half, completing the full lion. Leading the tech side, I leveraged React for front-end, Web3 for blockchain interactions, and Solidity for smart contract development. The <span style={styles.highlight}>minting process</span>, which kicks off on 9/23, is facilitated by an Express.js API hosted on AWS, with DynamoDB handling the data layer. I also architected the <span style={styles.highlight}>Lazy Butt NFT reveal</span> system and devised a <span style={styles.highlight}>token-gated</span> image download mechanism, granting Lazy Butt holders exclusive access to the full imagery of their enhanced Lazy Lions.
+                    </li>
+
+                    <li>
+                        <a href="https://the3dkings.io" target="_blank" rel="noreferrer">3D Kings</a>:
+                        The official hub for the 3D Kings community trait group, associated with Lazy Lions and Lazy Cubs. Built with React and backed by an Express.js API, the site is hosted on AWS, optimized for scalability and performance. The site serves as the gateway to the upcoming <span style={styles.highlight}>Visionarium</span>, a digital platform where members will wield the <span style={styles.highlight}>voting power</span> of their 3D Glasses NFTs to influence community projects and activities. My role encompassed the full stack of the project, from front-end development to back-end API design and AWS deployment.
                     </li>
                     <li>
-                        <a href="https://www.evobots.club/" target="_blank" rel="noreferrer">EVO Bots</a>:
-                        An add-on NFT collection for the upcoming
-                        {" "}<a href="https://cryptocave.club/" target="_blank" rel="noreferrer">Crypto Cave Club</a> web3 game.
-                        I created the smart contract and the front-end for minting the EVO Bots NFT collection, and an
-                        innovative system that allows the EVO Bots NFTs to <span style={styles.highlight}>unlock and reveal</span> a <span style={styles.highlight}>companion trait</span>{" "}
-                        when they are used <span style={styles.highlight}>socially on Twitter</span>.
+                        <a href="https://radi.crypt0potam.us/" target="_blank" rel="noreferrer">Wizard AI</a>:
+                        Wizard AI is not just another conversational agent; it's a tech marvel harnessing the <span style={styles.highlight}>OpenAI API</span> and GPT-3.5-turbo. I took the helm for tech, using React on the front-end and Express.js for the back-end API, intricately woven with <span style={styles.highlight}>Natural Language Processing algorithms</span>. Apart from the numerous AI personalities capable of conventional dialogues, Wizard AI features an experimental <span style={styles.highlight}>Dungeon Master mode</span>, enabling interactive adventures steered by AI-generated contextual buttons. All of this operates on a <span style={styles.highlight}>serverless AWS architecture</span>, designed for both high availability and scalability, wrapped up in a <span style={styles.highlight}>responsive UI</span> that caters to any device, be it mobile or desktop.
                     </li>
                     <li>
-                        <a href="https://www.cc0mune.xyz/" target="_blank" rel="noreferrer">CC0mune</a>:
-                        A small collection of NFTs that were <span style={styles.highlight}>free to mint, with
-                            a twist</span>. At 4:20pm, <span style={styles.highlight}>exactly one NFT was minted each day</span>{" "}
-                        during the mint phase. Each NFT is a derivative of the first minted
-                        NFTs from various CC0 collections. I created the smart contract
-                        and the front-end for minting the CC0 NFT collection.
-                    </li>
-                    <li>
-                        <a href="https://docs.the3dkings.io/" target="_blank" rel="noreferrer">Lazy Butts</a>:
-                        Currently under development, Lazy Butts is an unofficial <span style={styles.highlight}>add-on NFT collection</span>{" "}
-                        for Lazy Lions NFT holders. Each Lazy Butt NFT corresponds to a Lazy Lion NFT, and represents 
-                        the <span style={styles.highlight}>bottom half</span> of that lion. I created the smart contract
-                        and the front-end for minting the Lazy Butt NFT collection, as well as the <span style={styles.highlight}>back-end</span> for
-                        the <span style={styles.highlight}>Lazy Butt NFT reveal</span> system. I also created a <span style={styles.highlight}>token-gated</span> image
-                        download system that allows Lazy Butt NFT holders to download the <span style={styles.highlight}>full image</span> of their Lazy Lion.
+                        <span style={styles.highlight}>Assorted Web3 & NFT Projects</span>:
+                        My work covers a diverse range of creative endeavors in the NFT and Web3 arena. From <a href="https://www.evobots.club/" target="_blank" rel="noreferrer">EVO Bots</a>, a companion collection to the anticipated <a href="https://cryptocave.club/" target="_blank" rel="noreferrer">Crypto Cave Club</a>, to <a href="https://www.cc0mune.xyz/" target="_blank" rel="noreferrer">CC0mune</a> a playful project that changed the game by offering <span style={styles.highlight}>one free NFT daily at 4:20pm</span>. I've also had a hand in <span style={styles.highlight}>Goat Gauds</span>, featuring 2,222 uniquely designed goats, and the <a href="https://surfboard.saltysharks.io/" target="_blank" rel="noreferrer">Salty Sharks Surfboard dApp</a>, a game of chance with Matic rewards. I extended my contributions to the now-offline <a href="https://twitter.com/gabrielhaines" target="_blank" rel="noreferrer">Googly Eyed Rock Club</a>, curated by NFT influencer <span style={styles.highlight}>Gabriel Haines</span>. Across these projects, my responsibilities have ranged from smart contract coding to both front- and back-end development and inventive minting systems.
                     </li>
                 </ul>
             </div>
