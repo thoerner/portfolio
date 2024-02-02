@@ -11,3 +11,20 @@ export const getArticle = async (id) => {
     }
     return data
 }
+
+export const mintHippo = async () => {
+    const response = await fetch(`${apiURL}/mint/`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+
+    let data
+    try {
+        data = await response.json()
+    } catch (err) {
+        return false
+    }
+    return data
+}

@@ -79,6 +79,7 @@ const styles = {
         padding: '1rem 1.5rem',
         height: '4rem',
         boxShadow: '0 0 15px rgba(0, 0, 0, 0.5)',
+        zIndex: 10,
     },
     links: {
         display: 'flex',
