@@ -30,21 +30,28 @@ const shuffleArray = (array) => {
 };
 
 const loadingMessages = shuffleArray([
-  "Herding hippos on the blockchain...",
-  "Fetching hippos from the ledger...",
-  "Compiling smart contracts...",
-  "Minting your unique hippo...",
-  "Diving into the web3 river...",
-  "Syncing ledger with hippos...",
-  "Generating secure tokens...",
-  "Connecting to the hippo network...",
-  "Securing hippo transactions...",
-  "Establishing network consensus...",
-  "Crafting your hippo NFT...",
-  "Building decentralized habitats...",
-  "Optimizing contract efficiency...",
-  "Bathing hippos in the digital river...",
-  "Awaiting transaction confirmation...",
+  "Herding cats through smart contracts...",
+  "Fetching eagles from the decentralized sky...",
+  "Compiling the zoo of smart contracts...",
+  "Minting your unique animal token...",
+  "Diving into the web3 wilderness...",
+  "Syncing the ledger with the animal kingdom...",
+  "Generating secure wildlife tokens...",
+  "Connecting to the blockchain safari...",
+  "Securing transactions in the animal network...",
+  "Establishing consensus in the digital jungle...",
+  "Crafting your critter NFT...",
+  "Building decentralized habitats for digital fauna...",
+  "Optimizing contract efficiency in the animal ledger...",
+  "Bathing elephants in the digital waterhole...",
+  "Awaiting confirmation from the pack...",
+  "Tracking paw prints on the blockchain...",
+  "Howling with wolves at the moon of consensus...",
+  "Swimming with dolphins in the data stream...",
+  "Roaring approvals with digital lions...",
+  "Buzzing through smart contract honeycombs...",
+  "Fluttering around the blockchain butterfly effect...",
+  "Pouncing on transactions like a blockchain panther...",
 ]);
 
 const LoadingMessageComponent = () => {
@@ -72,7 +79,7 @@ const Spinner = ({ loading }) => {
 
   return (
     <div className="spinner-container">
-        <LoadingMessageComponent />
+      <LoadingMessageComponent />
       <div className="spinner"></div>
     </div>
   );
@@ -147,6 +154,9 @@ const Mint = (props) => {
         <p className="description">{hippoData?.description}</p>
         {hippoData && (
           <ul className="list">
+            <li className="listItem">
+              <b>Species:</b> {capitalize(hippoData?.attributes.animal)}
+            </li>
             <li className="listItem">
               <b>Occupation:</b> {capitalize(hippoData?.attributes.occupation)}
             </li>
