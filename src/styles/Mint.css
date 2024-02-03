@@ -73,6 +73,38 @@
   cursor: pointer;
 }
 
+.mintButton:hover {
+  animation: colorshift 2s infinite, pulse 1s infinite;
+}
+
+@keyframes colorshift {
+  0% {
+    background-color: #F2E9E4;
+    color: #4A4E69;
+  }
+  50% {
+    background-color: #4A4E69;
+    color: #F2E9E4;
+  }
+  100% {
+    background-color: #F2E9E4;
+    color: #4A4E69;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -124,6 +156,8 @@
 
 .spinner-container {
   display: flex;
+  color: black;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;

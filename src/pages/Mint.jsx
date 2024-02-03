@@ -24,6 +24,47 @@ const useWindowDimensions = () => {
   return windowDimensions;
 };
 
+const shuffleArray = (array) => {
+  const shuffledArray = array.sort(() => Math.random() - 0.5);
+  return shuffledArray;
+};
+
+const loadingMessages = shuffleArray([
+  "Herding hippos on the blockchain...",
+  "Fetching hippos from the ledger...",
+  "Compiling smart contracts...",
+  "Minting your unique hippo...",
+  "Diving into the web3 river...",
+  "Syncing ledger with hippos...",
+  "Generating secure tokens...",
+  "Connecting to the hippo network...",
+  "Securing hippo transactions...",
+  "Establishing network consensus...",
+  "Crafting your hippo NFT...",
+  "Building decentralized habitats...",
+  "Optimizing contract efficiency...",
+  "Bathing hippos in the digital river...",
+  "Awaiting transaction confirmation...",
+]);
+
+const LoadingMessageComponent = () => {
+  const [loadingMessage, setLoadingMessage] = useState(loadingMessages[0]);
+  const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLoadingMessageIndex(
+        (loadingMessageIndex + 1) % loadingMessages.length
+      );
+      setLoadingMessage(loadingMessages[loadingMessageIndex]);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [loadingMessageIndex]);
+
+  return <p className="loadingMessage">{loadingMessage}</p>;
+};
+
 const Spinner = ({ loading }) => {
   if (!loading) {
     return null;
@@ -31,6 +72,7 @@ const Spinner = ({ loading }) => {
 
   return (
     <div className="spinner-container">
+        <LoadingMessageComponent />
       <div className="spinner"></div>
     </div>
   );
@@ -42,7 +84,7 @@ const ImageModal = ({ isOpen, onClose, imageSrc, alt }) => {
 
   return (
     <div className="modalOverlay">
-      <div className="modal" style={{maxWidth: width > 768 ? "33%" : "80%"}}>
+      <div className="modal" style={{ maxWidth: width > 768 ? "33%" : "80%" }}>
         <div className="modalContextLayer" onClick={onClose}></div>
         <img src={imageSrc} alt={alt} className="modalImage" />
       </div>
