@@ -157,11 +157,12 @@
 
 .spinner-container {
   display: flex;
-  color: black;
+  color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+  border-radius: 0.25rem;
 }
 
 .spinner {
@@ -195,4 +196,14 @@
   color: #F2E9E4;
   border-radius: 0.33rem;
   margin: 5px;
+}
+
+.loadingMessage {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem 0;
+  width: 100%;
 }
