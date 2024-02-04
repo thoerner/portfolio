@@ -2,6 +2,15 @@ import { mintHippo } from "../utils/api";
 import { useState, useEffect } from "react";
 import HippoLogo from "../assets/hippo.svg";
 import "../styles/Mint.css";
+import { MdDownload } from "react-icons/md";
+import axios from "axios";
+
+const API_URL = import.meta.env.VITE_API_URL;
+
+function removeQuotes(str) {
+  if (typeof str !== "string") return "";
+  return str.replace(/^"|"$/g, "");
+}
 
 const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState({
@@ -140,18 +149,45 @@ const Mint = (props) => {
       .join(" ");
   }
 
+  async function downloadImage() {
+    try {
+      const response = await axios.get(`${API_URL}/mint/download`, {
+        params: { url: loadedImage },
+        responseType: 'blob', // Important: This tells axios to download the response as a Blob
+      });
+      
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      const date = new Date();
+      link.setAttribute('download', `${hippoData.attributes.animal}-${hippoData.attributes.occupation}-${date.getTime()}.png`); // Set the filename for download
+      document.body.appendChild(link);
+      link.click(); // Trigger the download
+  
+      window.URL.revokeObjectURL(url); // Clean up the object URL
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error("Failed to download the image:", error);
+    }
+  }
+
   return (
     <div className="mint">
       <div className="backgroundImage"></div>
       <div className="card">
         {isMinting && <Spinner loading={isMinting} />}
-        <img
-          onClick={openModal}
-          className={`image ${isMinting ? "image-blurred" : ""}`}
-          src={loadedImage ? loadedImage : HippoLogo}
-          alt="hippo"
-        />
-        <p className="description">{hippoData?.description}</p>
+        <div className="imageContainer">
+          <div onClick={downloadImage} className="downloadButton">
+            <MdDownload />
+          </div>
+          <img
+            onClick={openModal}
+            className={`image ${isMinting ? "image-blurred" : ""}`}
+            src={loadedImage ? loadedImage : HippoLogo}
+            alt="hippo"
+          />
+        </div>
+        <p className="description">{removeQuotes(hippoData?.description)}</p>
         {hippoData && (
           <ul className="list">
             <li className="listItem">
