@@ -226,7 +226,7 @@
   color: #4A4E69;
   border: none;
   cursor: pointer;
-  z-index: 10; /* Ensures the button is above the image */
+  z-index: 2; /* Ensures the button is above the image */
 }
 
 .downloadButton:hover {
