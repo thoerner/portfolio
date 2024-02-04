@@ -9,7 +9,12 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 function removeQuotes(str) {
   if (typeof str !== "string") return "";
-  return str.replace(/^"|"$/g, "");
+  // Check if the string starts and ends with a quote
+  if (str.startsWith('"') && str.endsWith('"')) {
+    // Remove the quotes at the start and end
+    return str.substring(1, str.length - 1);
+  }
+  return str; // Return the original string if it doesn't start and end with quotes
 }
 
 const useWindowDimensions = () => {
@@ -111,11 +116,11 @@ const ImageModal = ({ isOpen, onClose, imageSrc, alt }) => {
 const Mint = (props) => {
   const [isMinting, setIsMinting] = useState(false);
   const [hippoData, setHippoData] = useState(() => {
-    return JSON.parse(localStorage.getItem('lastHippoData')) || null;
+    return JSON.parse(localStorage.getItem("lastHippoData")) || null;
   });
 
   const [loadedImage, setLoadedImage] = useState(() => {
-    return localStorage.getItem('lastLoadedImageUrl') || null;
+    return localStorage.getItem("lastLoadedImageUrl") || null;
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -124,11 +129,11 @@ const Mint = (props) => {
   const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
-    const savedImageUrl = localStorage.getItem('lastLoadedImageUrl');
+    const savedImageUrl = localStorage.getItem("lastLoadedImageUrl");
     if (savedImageUrl) {
       setLoadedImage(savedImageUrl);
     }
-    const savedHippoData = JSON.parse(localStorage.getItem('lastHippoData'));
+    const savedHippoData = JSON.parse(localStorage.getItem("lastHippoData"));
     if (savedHippoData) {
       setHippoData(savedHippoData);
     }
@@ -143,9 +148,9 @@ const Mint = (props) => {
       imageToLoad.onload = () => {
         // Image is loaded, update the state
         setHippoData(data);
-        localStorage.setItem('lastHippoData', JSON.stringify(data)); // Save the data to local storage
+        localStorage.setItem("lastHippoData", JSON.stringify(data)); // Save the data to local storage
         setLoadedImage(imageToLoad.src);
-        localStorage.setItem('lastLoadedImageUrl', imageToLoad.src); // Save the URL to local storage
+        localStorage.setItem("lastLoadedImageUrl", imageToLoad.src); // Save the URL to local storage
         setIsMinting(false); // Stop the minting process as the image is loaded
       };
       imageToLoad.onerror = () => {
@@ -171,17 +176,22 @@ const Mint = (props) => {
     try {
       const response = await axios.get(`${API_URL}/mint/download`, {
         params: { url: loadedImage },
-        responseType: 'blob', // Important: This tells axios to download the response as a Blob
+        responseType: "blob", // Important: This tells axios to download the response as a Blob
       });
-      
+
       const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = url;
       const date = new Date();
-      link.setAttribute('download', `${hippoData.attributes.animal}-${hippoData.attributes.occupation}-${date.getTime()}.png`); // Set the filename for download
+      link.setAttribute(
+        "download",
+        `${hippoData.attributes.animal}-${
+          hippoData.attributes.occupation
+        }-${date.getTime()}.png`
+      ); // Set the filename for download
       document.body.appendChild(link);
       link.click(); // Trigger the download
-  
+
       window.URL.revokeObjectURL(url); // Clean up the object URL
       document.body.removeChild(link);
     } catch (error) {
