@@ -109,14 +109,30 @@ const ImageModal = ({ isOpen, onClose, imageSrc, alt }) => {
 };
 
 const Mint = (props) => {
-  const [hippoData, setHippoData] = useState(null);
   const [isMinting, setIsMinting] = useState(false);
-  const [loadedImage, setLoadedImage] = useState(null);
+  const [hippoData, setHippoData] = useState(() => {
+    return JSON.parse(localStorage.getItem('lastHippoData')) || null;
+  });
+
+  const [loadedImage, setLoadedImage] = useState(() => {
+    return localStorage.getItem('lastLoadedImageUrl') || null;
+  });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  useEffect(() => {
+    const savedImageUrl = localStorage.getItem('lastLoadedImageUrl');
+    if (savedImageUrl) {
+      setLoadedImage(savedImageUrl);
+    }
+    const savedHippoData = JSON.parse(localStorage.getItem('lastHippoData'));
+    if (savedHippoData) {
+      setHippoData(savedHippoData);
+    }
+  }, []);
 
   const handleMint = async () => {
     setIsMinting(true);
@@ -127,7 +143,9 @@ const Mint = (props) => {
       imageToLoad.onload = () => {
         // Image is loaded, update the state
         setHippoData(data);
+        localStorage.setItem('lastHippoData', JSON.stringify(data)); // Save the data to local storage
         setLoadedImage(imageToLoad.src);
+        localStorage.setItem('lastLoadedImageUrl', imageToLoad.src); // Save the URL to local storage
         setIsMinting(false); // Stop the minting process as the image is loaded
       };
       imageToLoad.onerror = () => {
